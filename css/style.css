@@ -218,11 +218,6 @@ img.first:hover {
     cursor: pointer;
 }
 
-.panels li div .black-text{
-
-    font: black;
-    
-}
 /* Flip card static ends here*/
 
 /* Flip card flip/animation starts here*/
@@ -338,9 +333,34 @@ textarea[name=leave_message]:focus{
     box-shadow: 0 0 15px 0 #FEFAE0;
 }
 
+/* Responsive Phone */
+
+@media (max-width: 767px){
+
+    .container2{
+        width: 100%;
+        border-radius: 5px;
+    }
 
 
+}
 
+/* Responsive Design Tablet */
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .container2{
+        width: 50%;
+        border-radius: 5px;
+    }
+
+
+}
+
+/* Responsive Design Computer */
+
+@media (min-width: 1025px) {
+
+}
 
 /* Reduced-motion accessibility things */
 /* Need to test to see if these work */
