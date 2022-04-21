@@ -9,11 +9,13 @@
 
 h1 {
     text-align: center;
-    font-size: 60px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-family: 'Kanit', 'Times New Roman', Times, serif;
     font-weight: 900;
-    padding: 100px;
-    color: dodgerblue;
+    font-style:italic;
+    padding: 1%;
+    color: rgb(0, 74, 147);
+    background-color: whitesmoke;
 
     
     /*animation h1*/
@@ -22,8 +24,21 @@ h1 {
 
 }
 
-.parallax h1, .parallax h2, .parallax-books h1, .parallax-books h2{
+.gradient-background{
+
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, dodgerblue 0%, skyblue 50%, #ffffff 100%);
+    color: black;
+    padding: 5% 0;
+}
+
+/*background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 50%, #ffffff 100%);
+  color: #084012; */
+
+ /*.parallax-books h1, .parallax-books h2, .parallax-nutrition h1, .parallax-nutrition h2, .parallax-injury h2{
     color: white;
+    font-weight:bold;
 }
 
 /* animation h1 */
@@ -47,7 +62,8 @@ h1 {
 h2 {
     text-align: center;
     font-size: 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Kanit', 'Times New Roman', Times, serif;
+    font-style:italic;
     padding: 50px;
    
 
@@ -55,8 +71,7 @@ h2 {
 
 h3{
     text-align: center;
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Kanit', 'Times New Roman', Times, serif;
 
 
 }
@@ -106,9 +121,9 @@ img{
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 350px;
+    width: 250px;
     display: block;
-    border: 5px solid #ffffff;
+    border: 5px solid dodgerblue;
     padding: 5px;
     border-radius: 10px;
 
@@ -117,7 +132,7 @@ img{
 
 img:hover {
     background: white;
-    border: 5px dotted dodgerblue;
+    border: 10px dotted dodgerblue;
   }
 
 img.first:hover {
@@ -264,7 +279,7 @@ img.first:hover {
 
 /* Flip card flip/animation ends here*/
 
-.plant-diet-benefits{
+/*.plant-diet-benefits{
     background-image: url(../images/plant-based-runners-vegetables.jpeg);
     padding: 200px;
     margin: 200px;
@@ -273,7 +288,7 @@ img.first:hover {
     background-repeat: no-repeat;
     background-size:cover;
     border: 1px grey;
-}
+} */
 
 
 
@@ -287,6 +302,13 @@ img.first:hover {
     align-items: center;
 }
 
+.grid-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
 
 .parallax{
     background-image: url(../images/header.jpg);
@@ -306,6 +328,23 @@ img.first:hover {
     background-size:cover;
 }
 
+.parallax-nutrition{
+    background-image: url(../images/plant-based-runners-4.jpg);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.parallax-injury{
+    background-image: url(../images/injury-prevention-stretching.jpeg);
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
 
 input[type=text] {
     width: 100%;
@@ -346,19 +385,11 @@ textarea[name=leave_message]:focus{
     }
 
     h1 {
-        text-align: center;
-        font-size: 40px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-weight: 900;
-        padding: 0px;
-        color: dodgerblue;
+        font-size: 30px;
     }
 
     h2 {
-        text-align: center;
-            font-size: 20px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            padding: 0px;    
+        font-size: 20px;
     }
     
     h3{
@@ -366,28 +397,63 @@ textarea[name=leave_message]:focus{
     }
 
     p {
-        font-size: 10px;
+        font-size: 15px;
+    }
+
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form{
+        margin: auto;
+        
     }
 
 
 }
 
 /* Responsive Design Tablet */
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px){
 
-    .container2{
-        width: 50%;
-        border-radius: 5px;
+    
+
+    .flex-break{
+        flex-basis: 100%;
+        width: 0;
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    
+        h2 {
+            font-size: 22px;
+        }
+        
+        h3{
+            font-size: 16px;
+        }
+    
+        p {
+            font-size: 16px;
+        }
+    
+        .grid{
+            grid-template-columns: 1fr 1fr;
+        }
+    
+        .contact-form{
+            margin: auto;
+            
+        }
+
+        .container2{
+            border:1px solid rgb(0, 74, 147);
+        }
+
     }
 
-
-}
-
-/* Responsive Design Computer */
-
-@media (min-width: 1025px) {
-
-}
 
 /* Reduced-motion accessibility things */
 /* Need to test to see if these work */
@@ -412,12 +478,13 @@ textarea[name=leave_message]:focus{
         transform: none;
     }
 
-    h1.bounce {
+    h1 {
         animation: none;
     }
 
     /* Need to test to see if these work */
-    .parallax{
-        transform: none;
+    .parallax, .parallax-books, .parallax-nutrition, .parallax-injury{
+        background-attachment: local;
     }
 }
+
